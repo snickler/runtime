@@ -1,5 +1,5 @@
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="Directory.Build.props" />
+  <Import Project="../../../tests/Directory.Build.props" />
 
   <Target Name="ResolveDisabledProjects" BeforeTargets="BuildAllProjects;CopyAllNativeTestProjectBinaries" >
     <PropertyGroup>
@@ -10,7 +10,10 @@
       <DisabledProjects Include="$(TestRoot)TestWrappers*\**\*.csproj" />
       <DisabledProjects Include="$(TestRoot)*\**\cs_template.csproj" />
       <DisabledProjects Include="$(TestRoot)Common\Coreclr.TestWrapper\Coreclr.TestWrapper.csproj" />
+      <DisabledProjects Include="$(TestRoot)Common\scripts\scripts.csproj" />
+      <DisabledProjects Include="$(TestRoot)Common\external\external.csproj" />
       <DisabledProjects Include="$(TestRoot)Common\test_dependencies\test_dependencies.csproj" />
+      <DisabledProjects Include="$(TestRoot)Common\test_dependencies_fs\test_dependencies.fsproj" />
       <DisabledProjects Include="$(TestRoot)Common\CoreFX\TestFileSetup\CoreFX.TestUtils.TestFileSetup.csproj" />
       <DisabledProjects Include="$(TestRoot)Common\PerfHarness\PerfHarness.csproj" />
       <DisabledProjects Include="$(TestRoot)Common\stress_dependencies\stress_dependencies.csproj" />
